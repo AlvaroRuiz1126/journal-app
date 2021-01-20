@@ -1,0 +1,61 @@
+.auth__main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $primary;
+    margin: 0px;
+    height: 100vh;
+    width: 100vw;
+}
+
+.auth__box-container {
+    background-color: white;
+    box-shadow: 0px 3px $dark-grey;
+    border-radius: 2px;
+    padding: 20px;
+    width: 250px;
+}
+
+.auth__title {
+    //draken es una funcion de SASS que te permite oscurecer un color deseado
+    color: darken($color: $primary, $amount: 20);
+    margin-bottom: 20px;
+}
+
+.auth__input {
+    color: $dark-grey;
+    border: 0px;
+    border-bottom: 1px solid $light-grey;
+    font-size: 16px;
+    margin-bottom: 10px;
+    height: 20px;
+    width: 100%;
+    transition: border-bottom .3s ease;
+
+    //esta sintaxis es lo mismo que decir .auth__input:focus, donde el empersand reemplaza todo lo que esta antes de los :
+    //esto permite establecer los estilos para cuando el focus este sobre los inputs o se le de click
+    &:focus {
+        outline: none;
+        border-bottom: 1px solid $primary;
+    }
+}
+
+.auth__social-networks {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+.auth__alert-error {
+    background-color: red;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    padding: 5px;
+}
