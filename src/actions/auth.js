@@ -20,7 +20,7 @@ export const startLoginWithEmailPassword = (email, password) => {
         //     dispatch(login(123, 'alvaro'));
         // }, 3500);
         dispatch(startLoading());
-        firebase.auth().signInWithEmailAndPassword(email, password)
+        return firebase.auth().signInWithEmailAndPassword(email, password)
             .then(({user}) => {
                 dispatch(login(user.uid, user.displayName));
                 //se debe colocar dentro de la promesa porque si se coloca fuera se ejecuta de manera sincrona con el anterior dispatch

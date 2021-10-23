@@ -16,7 +16,8 @@ export const fileUpload = async(file) => {
             return cloudResp.secure_url;
         }else{
             //me permite ver el error si algo malo sucede en la peticion
-            throw await resp.json();
+            //throw await resp.json();
+            return null;
         }
 
     } catch (error) {

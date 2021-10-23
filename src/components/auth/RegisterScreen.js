@@ -13,10 +13,10 @@ export const RegisterScreen = () => {
     //console.log(msgError);
 
     const [values, handleInputChange] = useForm({
-        name: '',
-        email: '',
-        password: '',
-        confirm: ''
+        name: 'Alvaro',
+        email: 'email@email.com',
+        password: '123456',
+        confirm: '123456'
     });
 
     const {name, email, password, confirm} = values;
@@ -54,7 +54,7 @@ export const RegisterScreen = () => {
     return (
         <>
             <h3 className="auth__title">Register</h3>
-            <form>
+            <form onSubmit={handleRegister}>
                 { 
                     msgError && 
                         (   
